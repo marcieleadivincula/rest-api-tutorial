@@ -1,23 +1,7 @@
-const express = require("express");
-//const routes = require("./routes/api");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
+const customExpress = require('./config/customExpress');
 
-//set up express app
-const app = express();
+const app = customExpress();
 
-//connect to mongoDB
-mongoose.connect("mongodb://localhost/odontotech");
-mongoose.Promise = global.Promise;
-
-app.use(bodyParser.json());
-
-//initialize routes
-//app.use("/api", routes);
-app.use("/api", require("./routes/api"));
-
-//listen for requests
-app.listen(process.env.port || 4000, () => {
-  console.log("Now listening for requests");
+app.listen(3000, (req, res) => {
+  console.log("Servidor rodando na porta 3000");
 });
-
