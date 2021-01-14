@@ -1,12 +1,12 @@
 {
-  "name": "rest-api-netninja",
+  "name": "rest-api-mysql",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Marciele Adivincula",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -16,5 +16,9 @@
   "devDependencies": {
     "nodemon": "^2.0.7"
   },
-  "description": ""
+  "description": "REST API Tutorial (Node, Express &amp; MySQL)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcieleadivincula/rest-api-tutorial/tree/main/rest-api-mysql"
+  }
 }
