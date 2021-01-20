@@ -11,9 +11,12 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "connection-string": "^4.3.2",
     "consign": "^0.1.6",
     "express": "^4.17.1",
-    "mongoose": "^5.11.11"
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.12",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
