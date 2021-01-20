@@ -1,7 +1,19 @@
-const customExpress = require('./config/customExpress');
+const customExpress = require("./config/customExpress");
+const connection = require("./infrastructure/connection");
+const Tables = require("./infrastructure/tables");
 
-const app = customExpress();
+connection.connect((err) => {
+  if (err) {
+    return console.error("error: " + err.message);
+  } else {
+    console.log("Connected to the MySQL server.");
+  }
 
-app.listen(3000, (req, res) => {
-  console.log("Servidor rodando na porta 3000");
+  Tables.init(connection);
+
+  const app = customExpress();
+
+  app.listen(3000, (req, res) => {
+    console.log("Servidor rodando na porta 3000");
+  });
 });
